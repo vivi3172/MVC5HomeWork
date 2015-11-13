@@ -86,8 +86,8 @@ namespace MVC5HomeWork.Controllers
 
         private bool EmailDuplicate(客戶聯絡人 客戶聯絡人)
         {
-            var 客戶 = db.客戶資料.Where(c => c.Id == 客戶聯絡人.客戶Id).FirstOrDefault();
-            if ((客戶 != null) && (客戶.客戶聯絡人.Where(連 => 連.Email == 客戶聯絡人.Email).Count() > 0))
+            var 聯絡人 = db.客戶資料.Where(c => c.Id == 客戶聯絡人.客戶Id).FirstOrDefault();
+            if ((聯絡人 != null) && (聯絡人.客戶聯絡人.Where(聯 => 聯.Email == 客戶聯絡人.Email).Count() > 0))
             {
                 return true;
             }
