@@ -18,14 +18,6 @@ namespace MVC5HomeWork.Controllers
         public ActionResult Index(string search)
         {
             var 客戶聯絡人 = db.客戶聯絡人.AsQueryable();
-            // data = data.Where(p => p.Price < 6);
-            //var data = db.Product.AsQueryable();
-            //data = data.Where(p => p.ProductName.Contains("100"));
-            //if (true)
-            //{
-            //    data = data.Where(p => p.Active == true);
-            //}
-            //data = data.OrderBy(p => p.ProductName);
 
             if (!string.IsNullOrEmpty(search))
             {
